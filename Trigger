@@ -1,9 +1,0 @@
-trigger FoodOptionTrigger on Food_Option__c (after insert, after update, after delete) {
-
-    If(trigger.isInsert && trigger.isAfter){
-
-     FoodOptionTriggerHandler.updateHotelInformation(trigger.new);
-
-    }
-
-}
